@@ -13,6 +13,7 @@ import (
 	"gorm.io/gorm"
 )
 
+// main initializes a test application with JWT authentication and a PostgreSQL database connection.
 func main() {
 	// Load environment variables from .env file
 	if err := godotenv.Load("../.env"); err != nil {

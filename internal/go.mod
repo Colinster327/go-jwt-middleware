@@ -2,15 +2,15 @@ module github.com/Colinster327/go-jwt-middleware/internal
 
 go 1.24.5
 
-replace github.com/Colinster327/go-jwt-middleware => ../
-
 require (
-	github.com/Colinster327/go-jwt-middleware v0.0.0-00010101000000-000000000000
+	github.com/Colinster327/go-jwt-middleware v0.0.0
 	github.com/gin-gonic/gin v1.10.1
 	github.com/joho/godotenv v1.5.1
 	gorm.io/driver/postgres v1.6.0
 	gorm.io/gorm v1.30.0
 )
+
+replace github.com/Colinster327/go-jwt-middleware => ../
 
 require (
 	github.com/bytedance/sonic v1.11.6 // indirect
@@ -32,6 +32,7 @@ require (
 	github.com/jinzhu/now v1.1.5 // indirect
 	github.com/json-iterator/go v1.1.12 // indirect
 	github.com/klauspost/cpuid/v2 v2.2.7 // indirect
+	github.com/kr/text v0.2.0 // indirect
 	github.com/leodido/go-urn v1.4.0 // indirect
 	github.com/mattn/go-isatty v0.0.20 // indirect
 	github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd // indirect

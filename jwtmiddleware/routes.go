@@ -100,3 +100,8 @@ func RefreshTokenView(baseUserModel BaseUserModel, db *gorm.DB) gin.HandlerFunc 
 func CreateTokens(username string) (string, string, error) {
 	return refreshTokens(username)
 }
+
+// ValidateAccessToken validates an access token and returns the username if valid.
+func ValidateToken(tokenString string) (string, error) {
+	return validateAccessToken(tokenString)
+}

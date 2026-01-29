@@ -19,7 +19,7 @@ func LoginView(baseUserModel BaseUserModel, db *gorm.DB) gin.HandlerFunc {
 		userObj := reflect.New(getStructType(baseUserModel)).Interface()
 		if err := db.Where("username = ?", request.Username).First(&userObj).Error; err != nil {
 			if err == gorm.ErrRecordNotFound {
-				ctx.JSON(404, gin.H{"error": "Invalid credentials"})
+				ctx.JSON(401, gin.H{"error": "Invalid credentials"})
 				return
 			} else {
 				ctx.JSON(500, gin.H{"error": "Database error"})
